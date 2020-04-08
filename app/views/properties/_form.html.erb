@@ -36,6 +36,15 @@
       <%= form.number_field :bedrooms, class: "form-control" %>
     </div>
 
+    <div class="field">
+      <%= form.label :photo %>
+      <%= form.file_field :photo, as: :file, class: "form-control" %>
+    </div>
+
+    <% if @property.photo.attached? %>
+      <%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+
     <div class="actions">
       <%= form.submit "Submit", class: "btn btn-block btn-primary"%>
     </div>

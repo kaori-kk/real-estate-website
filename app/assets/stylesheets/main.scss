@@ -1,3 +1,60 @@
+
+.container-marketing{
+  margin: 0 20px;
+}
+
+.property{
+  border: 0.2px solid #222;
+  padding: 10px;
+}
+
+@media screen and (min-width:1024px){
+  .heading-img{
+    height: 30vh;
+    width: 30vw;
+  }
+  .main-property-details{
+    width: 30vw;
+  }
+  .main-property{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width:781px) and (max-width:1023px){
+  .heading-img{
+    width: 50vw;
+    height: 40vh;
+  }
+  .main-property-details{
+    width: 50vw;
+  }
+
+  .main-property{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width:780px){
+  .heading-img{
+    width: 100%;
+  }
+  .main-property-details{
+    width: 100%;
+  }
+  .main-property{
+  display: grid;
+  grid-template-columns: 1fr;
+  }
+}
+
+
 .details-btn {
   width: 50%;
   margin: 0 auto;
