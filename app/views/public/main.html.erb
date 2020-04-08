@@ -1,13 +1,10 @@
-  <!-- Main jumbotron for a primary marketing message or call to action -->
 
-    <div class="container-banner-img">
-        <img src="https://res.cloudinary.com/kaori-kk/image/upload/v1586179790/banner-img_yawqny.jpg" id="banner-image" alt="img">
-      <div class="banner-text">
-        <h1>FIND YOUR IDEAL PLACE</h1>
-        <h3></h3>
-        <p><a class="main-btn" href="#">Learn more »</a></p>
-      </div>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/kaori-kk/image/upload/v1586354474/Screenshot_2020-04-08_at_16.00.56_f3y4dh.png);">
+    <div class="container">
+      <h1>A WAY TO FIND <br>A PERFECT PLACE</h1>
+      <a class="main-btn" href="#">Learn more »</a>
     </div>
+  </div>
 
 
   <div class="container-marketing">
@@ -19,13 +16,29 @@
                 <%= cl_image_tag property.photo.key, class: "heading-img"%>
               <% end %>
               <div class="main-property-details">
-                <h2 class="text-center"><%= property.name %></h2>
+                <div class="property-detail-1">
+                  <h4><%= property.name %></h4>
+                  <h4><i class="fas fa-euro-sign"></i><%= property.price %></h4>
+                </div>
+                <div class="property-detail-2">
+                  <% if property.rooms > 1 %>
+                    <p><i class="fas fa-couch"></i><%= property.rooms %> rooms</p>
+                  <% else %>
+                    <p><i class="fas fa-couch"></i><%= property.rooms %> room</p>
+                  <% end %>
+                  <% if property.bedrooms > 1 %>
+                    <p><i class="fas fa-bed"></i><%= property.bedrooms %> bedrooms</p>
+                  <% else %>
+                    <p><i class="fas fa-bed"></i><%= property.bedrooms %> bedroom</p>
+                  <% end %>
+                </div>
+
                 <p><a class="btn btn-secondary details-btn d-flex justify-content-center" href="#" role="button">View details »</a></p>
               </div>
             </div>
           <% end %>
-
         </div>
+
       <div class="arrow-icon">
         <i class="fas fa-chevron-left prev"></i>
         <i class="fas fa-chevron-right next"></i>
@@ -35,13 +48,13 @@
 
     <hr class="featurette-divider">
 
-    <div class="row featurette">
+    <div class="row featurette m-2">
       <div class="col-md-7">
         <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img src="https://res.cloudinary.com/kaori-kk/image/upload/v1586353405/Screenshot_2020-04-08_at_15.40.42_xjvays.png" class="marketing-img" alt="">
       </div>
     </div>
 
@@ -53,7 +66,7 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img src="https://res.cloudinary.com/kaori-kk/image/upload/v1586357915/Screenshot_2020-04-08_at_16.58.20_qhzzrr.png" class="marketing-img" alt="">
       </div>
     </div>
 
@@ -65,7 +78,7 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <img src="https://res.cloudinary.com/kaori-kk/image/upload/v1586353410/Screenshot_2020-04-08_at_15.42.03_c8py3j.png" class="marketing-img" alt="">
       </div>
     </div>
 
