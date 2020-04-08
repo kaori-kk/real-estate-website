@@ -11,22 +11,25 @@
 
 
   <div class="container-marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="main-property">
-      <% @properties.each do |property| %>
-        <div class="property">
-          <% if property.photo.attached? %>
-            <%= cl_image_tag property.photo.key, class: "heading-img"%>
+    <h2 class="title">Latest Properties</h2>
+        <div class="main-property">
+          <% @properties.each do |property| %>
+            <div class="property">
+              <% if property.photo.attached? %>
+                <%= cl_image_tag property.photo.key, class: "heading-img"%>
+              <% end %>
+              <div class="main-property-details">
+                <h2 class="text-center"><%= property.name %></h2>
+                <p><a class="btn btn-secondary details-btn d-flex justify-content-center" href="#" role="button">View details »</a></p>
+              </div>
+            </div>
           <% end %>
-          <div class="main-property-details">
-            <h2 class="text-center"><%= property.name %></h2>
-            <p><a class="btn btn-secondary details-btn d-flex justify-content-center" href="#" role="button">View details »</a></p>
-          </div>
-        </div>
-      <% end %>
-    </div>
 
+        </div>
+      <div class="arrow-icon">
+        <i class="fas fa-chevron-left prev"></i>
+        <i class="fas fa-chevron-right next"></i>
+      </div>
 
     <!-- START THE FEATURETTES -->
 
