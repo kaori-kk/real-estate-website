@@ -58,6 +58,16 @@
   .main-btn {
     padding: 15px 30px;
   }
+
+  .marketing-msg {
+    line-height: 30px;
+    letter-spacing: -1px;
+    margin-top: 60px;
+  }
+
+  .marketing-msg-2 {
+   text-align: end;
+  }
 }
 
 @media screen and (min-width:781px) and (max-width:1023px){
@@ -80,6 +90,7 @@
   .main-btn {
     padding: 15px 30px;
   }
+
 }
 
 @media screen and (max-width:780px){
@@ -105,6 +116,12 @@
   }
   .main-btn {
     padding: 10px 20px;
+  }
+  .marketing-msg h2 {
+    font-size: 25px;
+  }
+  .marketing-msg p {
+    font-size: 15px;
   }
 }
 
@@ -146,4 +163,8 @@
   font-weight: bold;
   font-family: 'Prata', serif;
   margin-bottom: 30px;
+}
+
+.container-marketing-message {
+  margin: 0 40px;
 }
