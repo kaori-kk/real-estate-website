@@ -1,0 +1,35 @@
+.property-detail-page {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.property-photo {
+  width: 100%;
+  animation: fadeIn 3s ease 0s 1 normal;
+  -webkit-animation: fadeIn 3s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@media screen and (min-width:1024px){
+  .property-photo {
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+
+@media screen and (min-width:781px) and (max-width:1023px){
+  .property-photo {
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+
+@media screen and (max-width:780px){
+
+}

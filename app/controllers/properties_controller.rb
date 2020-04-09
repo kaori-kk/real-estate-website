@@ -1,15 +1,19 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_account!, only: [:new, :create, :destroy]
+  before_action :set_sidebar, except: [:show]
 
   # GET /properties
   # GET /properties.json
   def index
     @properties = Property.all
+
   end
 
   # GET /properties/1
   # GET /properties/1.json
   def show
+    @property = Property.find(params[:id])
   end
 
   # GET /properties/new
@@ -19,6 +23,10 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1/edit
   def edit
+  end
+
+  def set_sidebar
+    @show_sidebar = true
   end
 
   # POST /properties

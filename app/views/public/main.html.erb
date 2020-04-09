@@ -1,4 +1,4 @@
-
+<div class="main-page">
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/kaori-kk/image/upload/v1586354474/Screenshot_2020-04-08_at_16.00.56_f3y4dh.png);">
     <div class="container">
       <h1>A WAY TO FIND <br>A PERFECT PLACE</h1>
@@ -32,8 +32,8 @@
                     <p><i class="fas fa-bed"></i><%= property.bedrooms %> bedroom</p>
                   <% end %>
                 </div>
+                <%= link_to "View details »", property_path(property), class: "btn btn-secondary details-btn d-flex justify-content-center" %>
 
-                <p><a class="btn btn-secondary details-btn d-flex justify-content-center" href="#" role="button">View details »</a></p>
               </div>
             </div>
           <% end %>
@@ -87,5 +87,4 @@
       <!-- /END THE FEATURETTES -->
     </div>
   </div>
-
-
+</div>

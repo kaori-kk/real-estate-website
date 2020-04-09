@@ -20,33 +20,30 @@
     <!-- Bootstrap core CSS -->
     <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
 
-  <body>
-     <% if ["public","device", "sessions", "registrations"].include?(controller.controller_name) %>
-      <header>
+  <body id='<%= controller.controller_name %>' class='<%= controller.action_name %>' >
+      <% if ["public","device", "sessions", "registrations"].include?(controller.controller_name) %>
         <%= render "layouts/nav/public" %>
         <%= controller.controller_name.inspect %> || <%= controller.action_name %>
         <%= yield %>
-
-      </header>
+    <% elsif controller.controller_name == "properties" && controller.action_name == "show" %>
+        <%= render "layouts/nav/public" %>
+        <%= controller.controller_name.inspect %> || <%= controller.action_name %>
+        <%= yield %>
     <% else %>
-
-      <%= render "layouts/nav/public" %>
       <%= render "layouts/nav/dashboard" %>
-
       <div class="container-fluid mt-5">
         <div class="row">
           <%= render "layouts/nav/sidebar" %>
-            <main role="main" class="col-sm-3 col-md-9 col-lg-10 px-4 mt-2"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
               <%= yield %>
             </main>
         </div>
-
       </div>
     <% end %>
 

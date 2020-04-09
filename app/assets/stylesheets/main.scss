@@ -1,3 +1,12 @@
+.main-page {
+  animation: fadeIn 1.5s ease 0s 1 normal;
+  -webkit-animation: fadeIn 1.5s ease 0s 1 normal;
+}
+
+@keyframes fadeIn { /*上のbody内で呼び出しているアニメーションと名前をそろえる*/
+    0% {opacity: 0} /* 始め */
+    100% {opacity: 1} /* 終わり */
+}
 
 .container-marketing{
   margin: 0 20px;
@@ -131,15 +140,15 @@
 }
 
 .main-btn {
-  opacity: 0.8;
-  border: 2px solid #333;
+  opacity: 0.6;
+  border: 2px solid #fff;
   border-radius: 25px;
   color: black;
   background-color: white;
 }
 
 .main-btn:hover {
-  opacity: 1.0;
+  opacity: 0.8;
   border: 2px solid #fff;
   color: #fff;
   text-decoration: none;

@@ -1,30 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="property-detail-page">
 
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
+  <%= cl_image_tag @property.photo.key, class: "property-photo"%>
 
-<p>
-  <strong>Address:</strong>
-  <%= @property.address %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @property.name %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @property.address %>
+  </p>
 
-<p>
-  <strong>Rooms:</strong>
-  <%= @property.rooms %>
-</p>
+  <p>
+    <strong>Price:</strong>
+    <%= @property.price %>
+  </p>
 
-<p>
-  <strong>Bedrooms:</strong>
-  <%= @property.bedrooms %>
-</p>
+  <p>
+    <strong>Rooms:</strong>
+    <%= @property.rooms %>
+  </p>
 
-  <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary"%> |
-  <%= link_to 'Back', properties_path, class: "btn btn-primary" %>
+  <p>
+    <strong>Bedrooms:</strong>
+    <%= @property.bedrooms %>
+  </p>
 
+    <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary"%> |
+    <%= link_to 'Back', properties_path, class: "btn btn-primary" %>
+</div>
