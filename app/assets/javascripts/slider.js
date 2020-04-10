@@ -37,9 +37,11 @@ $('.center-nav').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   asNavFor: '.center',
+  arrows: false,
   dots: true,
   centerMode: true,
   focusOnSelect: true,
+  dotsClass: 'slide-dots',
 
   responsive: [
    {
