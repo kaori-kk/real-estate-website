@@ -1,6 +1,7 @@
 <div class="property-detail-page">
-
-  <%= cl_image_tag @property.photo.key, class: "property-photo"%>
+  <% @property.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, class: "property-photo"%>
+  <% end %>
 
   <p>
     <strong>Name:</strong>
