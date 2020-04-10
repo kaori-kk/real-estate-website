@@ -1,7 +1,16 @@
 <div class="property-detail-page">
-  <% @property.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, class: "property-photo"%>
-  <% end %>
+  <div class="center">
+    <% @property.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, class: "property-photo"%>
+    <% end %>
+  </div>
+
+  <div class="center-nav">
+    <% @property.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, class: "property-photo-nav"%>
+    <% end %>
+  </div>
+
 
   <p>
     <strong>Name:</strong>
