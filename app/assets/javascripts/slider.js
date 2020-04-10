@@ -26,7 +26,10 @@ $(document).ready(function(){
     }
  ]
   });
-  $('.center').slick({
+})
+
+$(document).ready(function(){
+ $('.center').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
@@ -63,4 +66,3 @@ $('.center-nav').slick({
  ]
 });
 })
-

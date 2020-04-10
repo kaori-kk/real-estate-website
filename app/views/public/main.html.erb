@@ -13,7 +13,7 @@
           <% @properties.each do |property| %>
             <div class="property">
               <% if property.photos.attached? %>
-                  <%= cl_image_tag property.photos[0].key, class: "property-photo"%>
+                  <%= cl_image_tag property.photos[0].key, class: "heading-img"%>
 
               <% end %>
 
