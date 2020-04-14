@@ -19,45 +19,53 @@
 
   <div class="property-info">
     <div class="apartment-info">
+      <div class="details">
+        <div class="detail1">
+          <p>
+            <%= @property.address %>
+          </p>
 
-      <div class="detail1">
-        <p>
-          <%= @property.address %>
-        </p>
+          <h3>
+            <strong class="apt-name"><%= @property.name %></strong>
+          </h3>
+        </div>
 
-        <h3>
-          <strong class="apt-name"><%= @property.name %></strong>
-        </h3>
+        <div class="detail2">
+          <p>
+            <strong>Price:</strong>
+            <%= @property.price %>
+          </p>
 
-        <p>
-          <strong>Price:</strong>
-          <%= @property.price %>
-        </p>
+          <div class="apt-room">
+            <p>
+              <i class="fas fa-couch"></i>
+              <%= @property.rooms %>
+            </p>
+
+            <p>
+              <i class="fas fa-bed"></i>
+              <%= @property.bedrooms %>
+            </p>
+
+            <p>
+              <i class="fas fa-car"></i>
+              <%= @property.parking %>
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div class="detail2">
-        <p>
-          <i class="fas fa-couch"></i>
-          <%= @property.rooms %>
-        </p>
 
-        <p>
-          <i class="fas fa-bed"></i>
-          <%= @property.bedrooms %>
-        </p>
 
-        <p>
-          <i class="fas fa-car"></i>
-          <%= @property.parking %>
-        </p>
+      <p>
+        <strong>Description:</strong>
+        <br><%= @property.description %>
+      </p>
 
-      </div>
     </div>
     <div class="agent-info">
       <%= render "properties/agent_details" %>
     </div>
-
-
   </div>
 
     <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary"%> |

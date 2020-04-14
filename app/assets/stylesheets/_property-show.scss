@@ -66,6 +66,13 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
+  .details {
+    display: flex;
+    justify-content: space-around;
+  }
+  .details p {
+    padding: 10px;
+  }
 }
 
 
@@ -74,6 +81,13 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
   }
+  .details {
+    display: flex;
+    justify-content: space-around;
+  }
+  .details p {
+    padding: 10px;
+  }
 }
 
 
@@ -81,12 +95,24 @@
 
   .property-info p{
     font-size: 15px;
-    padding-top: 5px;
   }
 
   .property-photo-nav {
     height: 21vh !important;
     padding: 5px;
+  }
+
+  .detail2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .apt-room p {
+    padding: 0 5px;
+  }
+
+  .heading-apt-show {
+    display: none;
   }
 }
 
@@ -98,17 +124,18 @@
   background-color:white;
 }
 
+
+
+
 .agent-info {
-    background-color: #2C4935;
+  background-color: #2C4935;
 }
 
-.detail2 {
+.apt-room {
   display: flex;
 
   p {
-    padding: 10px;
     border-right: 0.5px solid grey;
-
   }
 }
 

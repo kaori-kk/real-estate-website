@@ -37,6 +37,16 @@
     </div>
 
     <div class="field">
+      <%= form.label :parkings %>
+      <%= form.number_field :parking, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_field :description, class: "form-control" %>
+    </div>
+
+    <div class="field">
       <%= form.label :photos %>
       <%= form.file_field :photos, as: :file, multiple: true, class: "form-control" %>
     </div>
