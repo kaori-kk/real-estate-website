@@ -5,38 +5,45 @@
     <% end %>
   </div>
 
+
   <div class="center-nav">
     <% @property.photos.each do |photo| %>
       <%= cl_image_tag photo.key, class: "property-photo-nav"%>
     <% end %>
   </div>
+</div>
 
+  <div class="property-info">
+    <p>
+      <strong class="apt-name"><%= @property.name %></strong>
+    </p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @property.name %>
-  </p>
+    <div class="detail1">
+      <p>
+        <strong>Address:</strong>
+        <%= @property.address %>
+      </p>
 
-  <p>
-    <strong>Address:</strong>
-    <%= @property.address %>
-  </p>
+      <p>
+        <strong>Price:</strong>
+        <%= @property.price %>
+      </p>
+    </div>
 
-  <p>
-    <strong>Price:</strong>
-    <%= @property.price %>
-  </p>
+    <div class="detail1">
+      <p>
+        <strong>Rooms:</strong>
+        <%= @property.rooms %>
+      </p>
 
-  <p>
-    <strong>Rooms:</strong>
-    <%= @property.rooms %>
-  </p>
+      <p>
+        <strong>Bedrooms:</strong>
+        <%= @property.bedrooms %>
+      </p>
+    </div>
 
-  <p>
-    <strong>Bedrooms:</strong>
-    <%= @property.bedrooms %>
-  </p>
+  </div>
 
     <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary"%> |
     <%= link_to 'Back', properties_path, class: "btn btn-primary" %>
-</div>
+

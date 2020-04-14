@@ -54,18 +54,57 @@
 }
 
 @media screen and (min-width:1024px){
+  .property-info p{
+    font-size: 25px;
+      padding: 10px;
+  }
 
+  .detail1 {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 
-@media screen and (min-width:781px) and (max-width:1023px){
-
+@media screen and (min-width:365px) and (max-width:1023px){
+  .property-info p{
+    font-size: 25px;
+      padding: 10px;
+  }
+  .detail1 {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 
-@media screen and (max-width:780px){
+@media screen and (max-width:364px){
+  .property-info p{
+    font-size: 15px;
+    padding-top: 5px;
+  }
+
   .property-photo-nav {
     height: 21vh !important;
     padding: 5px;
   }
+
+  .apt-name {
+    font-size:20px;
+  }
 }
+
+.property-info {
+  background-color: #2C4935;
+  color: white;
+  height: 50vh;
+  padding: 20px;
+
+}
+
+.property-info p{
+  text-align: center;
+
+}
+
+
