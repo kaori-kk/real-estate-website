@@ -3,6 +3,14 @@
   margin-top: 30px;
 }
 
+.heading-apt-show {
+  display: flex;
+  border-bottom: 0.1px solid grey;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
 .property-photo {
   // animation: fadeIn 3s ease 0s 1 normal;
   // -webkit-animation: fadeIn 3s ease 0s 1 normal;
@@ -54,31 +62,23 @@
 }
 
 @media screen and (min-width:1024px){
-  .property-info p{
-    font-size: 25px;
-      padding: 10px;
-  }
-
-  .detail1 {
-    display: flex;
-    justify-content: space-around;
+  .property-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 }
 
 
-@media screen and (min-width:365px) and (max-width:1023px){
-  .property-info p{
-    font-size: 25px;
-      padding: 10px;
-  }
-  .detail1 {
-    display: flex;
-    justify-content: space-around;
+@media screen and (min-width:421px) and (max-width:1023px){
+  .property-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 }
 
 
-@media screen and (max-width:364px){
+@media screen and (max-width:420px){
+
   .property-info p{
     font-size: 15px;
     padding-top: 5px;
@@ -88,23 +88,28 @@
     height: 21vh !important;
     padding: 5px;
   }
-
-  .apt-name {
-    font-size:20px;
-  }
 }
 
 .property-info {
-  background-color: #2C4935;
-  color: white;
-  height: 50vh;
-  padding: 20px;
-
+  margin: 0 30px;
 }
 
-.property-info p{
-  text-align: center;
+.apartment-info{
+  background-color:white;
+}
 
+.agent-info {
+    background-color: #2C4935;
+}
+
+.detail2 {
+  display: flex;
+
+  p {
+    padding: 10px;
+    border-right: 0.5px solid grey;
+
+  }
 }
 
 
