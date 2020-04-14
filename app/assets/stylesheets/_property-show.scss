@@ -65,14 +65,34 @@
   .property-info {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    margin: 10px 50px;
   }
-  .details {
-    display: flex;
-    justify-content: space-around;
+  .apartment-info {
+    display: grid;
+    margin-left: 45px;
+
+    p {
+      font-size: 15px;
+    }
   }
-  .details p {
-    padding: 10px;
+  .detail1 {
+    grid-row: 1;
+    grid-column: 1;
   }
+  .detail2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .detail2 p {
+    padding: 0 10px;
+  }
+
+  .description {
+    margin-top: 15px;
+  }
+  .property-info {
+
+}
 }
 
 
@@ -80,21 +100,37 @@
   .property-info {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    margin: 10px 50px;
   }
-  .details {
-    display: flex;
-    justify-content: space-around;
+  .apartment-info {
+    display: grid;
+    margin: 45px;
   }
-  .details p {
-    padding: 10px;
+  .detail1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .detail2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .detail2 p {
+    padding: 0 10px;
+  }
+  .description {
+    margin-top: 15px;
   }
 }
 
 
 @media screen and (max-width:420px){
 
-  .property-info p{
-    font-size: 15px;
+  .property-info {
+    margin: 5px 10px;
+
+    p {
+      font-size: 15px;
+    }
   }
 
   .property-photo-nav {
@@ -116,20 +152,10 @@
   }
 }
 
-.property-info {
-  margin: 0 30px;
-}
-
 .apartment-info{
   background-color:white;
 }
 
-
-
-
-.agent-info {
-  background-color: #2C4935;
-}
 
 .apt-room {
   display: flex;
@@ -139,4 +165,14 @@
   }
 }
 
+.agent-info {
+  background-color: #59C3C3;
+  color: #222;
+  padding: 15px;
+  text-align: center;
+
+  p {
+    font-size: 15px;
+  }
+}
 

@@ -1,7 +1,7 @@
 <div class="property-detail-page">
   <div class="heading-apt-show">
     <h3><%= @property.name %></h3>
-    <p>address: <%= @property.address %></p>
+    <p><i class="fas fa-euro-sign"></i><%= @property.price %></p>
   </div>
   <div class="center">
     <% @property.photos.each do |photo| %>
@@ -19,21 +19,20 @@
 
   <div class="property-info">
     <div class="apartment-info">
-      <div class="details">
-        <div class="detail1">
-          <p>
-            <%= @property.address %>
-          </p>
+      <div class="detail1">
+        <p>
+          <%= @property.address %>
+        </p>
 
-          <h3>
-            <strong class="apt-name"><%= @property.name %></strong>
-          </h3>
-        </div>
+        <h3>
+          <strong class="apt-name"><%= @property.name %></strong>
+        </h3>
+      </div>
 
-        <div class="detail2">
+      <div class="detail2">
           <p>
-            <strong>Price:</strong>
-            <%= @property.price %>
+            <strong>Price:　€</strong>
+            <%=@property.price %>
           </p>
 
           <div class="apt-room">
@@ -52,16 +51,14 @@
               <%= @property.parking %>
             </p>
           </div>
-        </div>
       </div>
 
-
-
-      <p>
-        <strong>Description:</strong>
-        <br><%= @property.description %>
-      </p>
-
+      <div class="description">
+        <p>
+          <strong>Description:</strong>
+          <br><%= @property.description %>
+        </p>
+      </div>
     </div>
     <div class="agent-info">
       <%= render "properties/agent_details" %>
