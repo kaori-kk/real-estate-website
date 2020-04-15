@@ -64,7 +64,10 @@
     <div class="agent-info">
       <%= render "properties/agent_details" %>
     </div>
+
   </div>
+
+  <%= render "properties/agent_property_list", properties: @agent_properties %>
 
 
     <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary"%> |

@@ -1,0 +1,32 @@
+<h2 class="title"><%= @agent.first_name %>'s Properties</h2>
+<div class="main-property">
+  <% properties.each do |property| %>
+    <div class="property">
+      <% if property.photos.attached? %>
+          <%= cl_image_tag property.photos[0].key, class: "heading-img"%>
+
+      <% end %>
+
+      <div class="main-property-details">
+        <div class="property-detail-1">
+          <h4><%= property.name %></h4>
+          <h4><i class="fas fa-euro-sign"></i><%= property.price %></h4>
+        </div>
+        <div class="property-detail-2">
+          <% if property.rooms > 1 %>
+            <p><i class="fas fa-couch"></i><%= property.rooms %> rooms</p>
+          <% else %>
+            <p><i class="fas fa-couch"></i><%= property.rooms %> room</p>
+          <% end %>
+          <% if property.bedrooms > 1 %>
+            <p><i class="fas fa-bed"></i><%= property.bedrooms %> bedrooms</p>
+          <% else %>
+            <p><i class="fas fa-bed"></i><%= property.bedrooms %> bedroom</p>
+          <% end %>
+        </div>
+        <%= link_to "View details »", property_path(property), class: "btn btn-secondary details-btn d-flex justify-content-center" %>
+
+      </div>
+    </div>
+  <% end %>
+</div>
