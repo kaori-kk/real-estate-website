@@ -1,7 +1,7 @@
 <div class="property-detail-page">
   <div class="heading-apt-show">
     <h3><%= @property.name %></h3>
-    <p><i class="fas fa-euro-sign"></i><%= @property.price %></p>
+    <p><%= @property.price > 0 ? number_to_currency(@property.price, unit: '€', presicion: 0) : "For Sale" %></p>
   </div>
   <div class="center">
     <% @property.photos.each do |photo| %>
@@ -32,7 +32,7 @@
       <div class="detail2">
           <p>
             <strong>Price:　€</strong>
-            <%=@property.price %>
+            <%=@property.price %> / month
           </p>
 
           <div class="apt-room">
@@ -54,16 +54,18 @@
       </div>
 
       <div class="description">
-        <p>
+        <p class="description-text">
           <strong>Description:</strong>
           <br><%= @property.description %>
         </p>
+        <button class="btn btn-outline-info toggleDetails mb-3 ">Read more</button>
       </div>
     </div>
     <div class="agent-info">
       <%= render "properties/agent_details" %>
     </div>
   </div>
+
 
     <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary"%> |
     <%= link_to 'Back', properties_path, class: "btn btn-primary" %>
