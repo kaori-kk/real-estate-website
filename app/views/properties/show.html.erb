@@ -27,6 +27,15 @@
         <h3>
           <strong class="apt-name"><%= @property.name %></strong>
         </h3>
+
+        <% if @property.available_date != nil %>
+          <p><strong>
+            Available from: <%= @property.available_date.day.ordinalize %> <%= @property.available_date.strftime('%B') %> <%= @property.available_date.strftime('%Y') %>
+          </strong></p>
+        <% else %>
+          <p><strong>Available from: Contact to Agent</strong></p>
+        <% end %>
+
       </div>
 
       <div class="detail2">
