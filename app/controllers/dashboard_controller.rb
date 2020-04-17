@@ -2,7 +2,8 @@ class DashboardController < ApplicationController
   def index
   end
 
-  def properties
+  def profile
+    @account = Account.find(params[:id])
   end
 
   def reports
