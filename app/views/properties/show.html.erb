@@ -39,7 +39,7 @@
       </div>
 
       <div class="detail2">
-          <p>
+          <p class="price">
             <strong>Price:　€</strong>
             <%=@property.price %> / m
           </p>
@@ -70,18 +70,19 @@
         <button class="btn btn-outline-info toggleDetails mb-3 ">Read more</button>
       </div>
     </div>
+
     <div class="agent-info">
-      <%= render "properties/agent_details" %>
+      <div class="agent">
+        <%= render "properties/agent_details" %>
+      </div>
+      <div class="map mt-3">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAAgksYhopX2yPWlXtMRqDfHanHc5TYzY&q=<%= @property.address.to_param %>" width="320" height="240" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"></iframe>
+      </div>
     </div>
 
-
-    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBAAgksYhopX2yPWlXtMRqDfHanHc5TYzY&q=<%= @property.address.to_param %>" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"></iframe>
 
   </div>
 
   <%= render "properties/agent_property_list", properties: @agent_properties %>
 
-
-    <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-primary"%> |
-    <%= link_to 'Back', properties_path, class: "btn btn-primary" %>
 
