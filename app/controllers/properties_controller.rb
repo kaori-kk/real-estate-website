@@ -79,6 +79,8 @@ class PropertiesController < ApplicationController
     email = params[:email]
     message = params[:message]
 
+    ContactMailer.email_agent( agent_id, last_name, first_name, email, message).deliver_now
+
     respond_to do |format|
       format.json { head :no_content }
     end

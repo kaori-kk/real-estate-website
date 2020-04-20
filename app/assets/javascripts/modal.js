@@ -19,7 +19,9 @@ $(function(){
       message: message
     },
     success: function(data){
-      console.log(data);
+      $('#contactAgent form').remove();
+      $("#send-message").remove();
+      $('#contactAgent .modal-body').text("Your message has been sent successfully.");
     }
   })
  });
