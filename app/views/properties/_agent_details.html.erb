@@ -1,7 +1,7 @@
 <% if @agent.image.attached? %>
   <%= cl_image_tag @agent.image.key, height: 100, width: 100, radius: "max", background: "#59C3C3" %>
 <% else %>
-  <%= image_tag "placeholder.jpg" %>
+  <%= image_tag "placeholder.png", height: 100, width: 100, radius: "max", background: "#59C3C3"  %>
 <% end %>
 <h2><%= @agent.full_name %></h2>
 <p><%= @agent.company %></p>
